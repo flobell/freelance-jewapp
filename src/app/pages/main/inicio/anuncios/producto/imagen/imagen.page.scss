@@ -1,0 +1,26 @@
+
+ion-content{
+    --background: #F4F4F4;
+
+    img.imagen{
+        display: flex;
+        width: 375pt;
+        height: 436pt;
+        margin: 12pt auto;
+        background: grey;
+    }
+
+    ion-button.guardar{
+        display: flex;
+        width: 124.15pt;
+        height: 26.92pt;
+        margin: 12pt auto;
+        color: white;
+        --border-radius: 0pt;
+        --background: var(--color-quinto);
+        --background-activated:  var(--color-quinto); 
+        --background-focused :  var(--color-quinto);
+        --background-hover: var(--color-quinto);
+    }
+}
+

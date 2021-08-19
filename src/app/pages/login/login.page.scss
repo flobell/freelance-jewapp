@@ -1,0 +1,96 @@
+ion-content{
+    --background: linear-gradient(180deg, rgba(37,186,240,1) 0%, rgba(37,72,172,1) 90%);
+    --padding-start: 36.5pt;
+    --padding-end: 36.5pt;
+    text-align: center;
+    height: 100%;
+}
+
+img.logo-principal{
+    margin-top: 44pt;
+    margin-bottom: 49pt;
+    height: 130pt;
+    width: 130pt;
+    border-radius: 50%;
+}
+
+ion-item.campo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10pt;
+    background: #FFFFFF;
+    margin-block-end: 14pt;
+    opacity: 90%;
+    height: 55pt; 
+
+    ion-input{
+        font-size: 16pt;
+        text-align: center;
+        --placeholder-color: #2548AC;
+        --placeholder-font-weight: bold;
+        --placeholder-opacity: 100%;
+    }
+
+}
+
+ion-button.loginButton{
+    --border-radius: 10pt;
+    color: #FFFFFF;
+    --background: #284BA9;
+    --background-activated: #284BA9; 
+    --background-focused : #284BA9;
+    --background-hover: #284BA9;
+    height: 55pt; 
+    font-size: 18pt;
+}
+
+
+p.forgot{
+    text-align: center;
+    color: #FFFFFF;
+    margin-block-start: 27pt;
+    margin-block-end: 15.5pt;
+}
+
+div.horizontal-line{
+    height: 1px; 
+    background-color: #FFFFFF;
+    width: 100%;
+    float: left;
+    margin-block-end: 32.5pt;
+}
+
+ion-button.registerButton{
+    --border-radius: 10pt;
+    color: #FFFFFF;
+    --background: #FF7F00;
+    --background-activated: #FF7F00; 
+    --background-focused : #FF7F00;
+    --background-hover: #FF7F00;
+    height: 55pt;
+    font-size: 18pt;
+    margin-block-end: 59pt; 
+}
+
+p.powered{
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 16pt;
+}
+
+.text-input::-webkit-input-placeholder {
+text-align: center;
+}
+
+.text-input:-moz-placeholder {
+text-align: center;
+}
+
+.text-input::-moz-placeholder {
+text-align: center;
+}
+
+.text-input:-ms-input-placeholder {
+text-align: center;
+}

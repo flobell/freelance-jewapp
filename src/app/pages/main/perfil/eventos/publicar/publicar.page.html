@@ -1,0 +1,76 @@
+<ion-header class="cabecera-90h" style="background-color: var(--color-tercero);">
+  <img class="logo" src="assets/icon/logoBlancoInicio.png" alt="logoBlancoInicio.png">
+  <ion-toolbar class="cabecera-toolbar">
+    <ion-title class="cabecera-toolbar-titulo" style="font-size: 18pt;">
+      <ion-icon name="arrow-dropleft" style="float: left;" (click)="volver()"></ion-icon>
+      <b>Agregar Evento</b>
+      <ion-label style="float: right; font-size: 16pt; color: white;" (click)="continuar()">Sig</ion-label>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="formulario">
+    
+    <div class="formulario-campo">
+      <ion-label class="formulario-campo-titulo">CARTEL DEL EVENTO *</ion-label>
+      <ion-input class="formulario-campo-input" placeholder="Seleccionar foto" type="file" name="foto" accept="image" style="margin-bottom: 8pt;"></ion-input>  
+    </div>
+
+    <div class="formulario-campo">
+      <ion-label class="formulario-campo-titulo">FECHA *<p style="float: right; margin-right: 52pt; font-size: 14pt; color: #707070;">HORA</p></ion-label>
+      <div class="formulario-campo" style="margin-top: 8pt;">
+        <ion-label class="formulario-campo-titulo" style="display: block;">Inicio</ion-label>
+        <ion-input class="formulario-campo-input" placeholder="dd" name="idia" style="display: inline-block; width: 41pt; height: 32pt; margin-left: 20pt; --padding-start: 10pt; --padding-end: 10pt;"></ion-input>
+        <ion-input class="formulario-campo-input" placeholder="mm" name="imes" style="display: inline-block; width: 41pt; height: 32pt; margin-left: 20pt; --padding-start: 10pt; --padding-end: 10pt;"></ion-input>
+        <ion-input class="formulario-campo-input" placeholder="aaaa" name="iano" style="display: inline-block; width: 58pt; height: 32pt; margin-left: 20pt; --padding-start: 10pt; --padding-end: 10pt;"></ion-input>
+        <ion-input class="formulario-campo-input" placeholder="hh:mm" name="ihora" style="float: right; width: 58pt; height: 32pt; margin-left: 20pt; margin-right: 20pt; --padding-start: 10pt; --padding-end: 10pt;"></ion-input>
+      </div>
+
+      <div class="formulario-campo" style="margin-top: 8pt;">
+        <ion-label class="formulario-campo-titulo" style="display: block;">Fin</ion-label>
+        <ion-input class="formulario-campo-input" placeholder="dd" name="fdia" style="display: inline-block; width: 41pt; height: 32pt; margin-left: 20pt; --padding-start: 10pt; --padding-end: 10pt;"></ion-input>
+        <ion-input class="formulario-campo-input" placeholder="mm" name="fmes" style="display: inline-block; width: 41pt; height: 32pt; margin-left: 20pt; --padding-start: 10pt; --padding-end: 10pt;"></ion-input>
+        <ion-input class="formulario-campo-input" placeholder="aaaa" name="fano" style="display: inline-block; width: 58pt; height: 32pt; margin-left: 20pt; --padding-start: 10pt; --padding-end: 10pt;"></ion-input>
+        <ion-input class="formulario-campo-input" placeholder="hh:mm" name="fhora" style="float: right; width: 58pt; height: 32pt; margin-left: 20pt; margin-right: 20pt; --padding-start: 10pt; --padding-end: 10pt;"></ion-input>
+      </div>
+    </div>
+
+    <div class="formulario-campo">
+      <ion-label class="formulario-campo-titulo">NOMBRE DEL EVENTO *</ion-label>
+      <ion-input class="formulario-campo-input" placeholder="Escribe el nombre del evento" type="text" name="nombre"></ion-input>
+    </div>
+
+    <div class="formulario-campo">
+      <ion-label class="formulario-campo-titulo">CATEGORÍA *</ion-label>
+      <ion-select class="formulario-campo-select" placeholder="Elige el tipo de evento" name="categoria" >
+        <ion-select-option value="clase">Clase</ion-select-option>
+        <ion-select-option value="conferencia">Conferenica</ion-select-option>
+        <ion-select-option value="seminario">Seminario</ion-select-option>
+        <ion-select-option value="viaje">Viaje</ion-select-option>
+        <ion-select-option value="torneo">Torneo</ion-select-option>
+        <ion-select-option value="rifa">Rifa</ion-select-option>
+        <ion-select-option value="taller">Taller</ion-select-option>
+      </ion-select>
+    </div>
+
+    <div class="formulario-campo">
+      <ion-label class="formulario-campo-titulo">ETIQUETAS DE BÚSQUEDA *</ion-label>
+      <ion-select class="formulario-campo-select" placeholder="Elige las etiquetas que describen tu evento" name="etiquetas" >
+      </ion-select>
+    </div>
+
+    <div class="formulario-campo">
+      <ion-label class="formulario-campo-titulo">UBICACIÓN</ion-label>
+      <ion-input class="formulario-campo-input" placeholder="Escribe la dirección del evento" type="text" name="nombre"></ion-input>
+    </div>
+
+    <div class="formulario-campo">
+      <ion-label class="formulario-campo-titulo">DESCRIPCIÓN *</ion-label>
+      <ion-textarea class="formulario-campo-textarea" placeholder="Escribe la descripción del evento" type="text" name="descripcion"></ion-textarea>
+    </div>
+
+    <ion-button class="formulario-boton-siguiente" type="button" (click)="continuar()">Siguiente</ion-button>
+
+  </div>
+</ion-content>

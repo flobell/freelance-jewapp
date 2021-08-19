@@ -1,0 +1,56 @@
+<ion-header class="cabecera-90h" style="background-color: var(--color-tercero);">
+  <img class="logo" src="assets/icon/logoBlancoInicio.png" alt="logoBlancoInicio.png">
+  <ion-toolbar class="cabecera-toolbar">
+    <ion-title class="cabecera-toolbar-titulo" style="font-size: 18pt;">
+      <ion-icon name="arrow-dropleft" style="float: left;" (click)="volver()"></ion-icon>
+      <b>Búsqueda Avanzada</b>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="formulario">
+    <div class="elemento">
+        <ion-label><b>Fecha</b></ion-label><br>
+        <ion-item lines="none" style="width: 41pt; height: 32pt; --border-radius: 0pt; display: inline-block;">
+          <ion-input type="text" name="dia" placeholder="dd"></ion-input>
+        </ion-item>
+        <ion-item lines="none" style="width: 41pt; height: 32pt; --border-radius: 0pt; display: inline-block; margin: 0pt 10pt;">
+          <ion-input type="text" name="mes" placeholder="mm"></ion-input>
+        </ion-item>
+        <ion-item lines="none" style="width: 58pt; height: 32pt; --border-radius: 0pt; display: inline-block;">
+          <ion-input type="text" name="mes" placeholder="aaaa"></ion-input>
+        </ion-item>
+        <ion-item lines="none" style="width: 58pt; height: 32pt; --border-radius: 0pt; display: block; float: right;">
+          <ion-input type="text" name="mes" placeholder="hh:mm"></ion-input>
+        </ion-item>
+      </div>  
+
+    <div class="elemento">
+      <ion-label><b>Categorías</b></ion-label>
+      <ion-item lines="none">
+        <ion-label>Elige una opción</ion-label>
+        <ion-select name="Categorías" > 
+        </ion-select>
+      </ion-item>
+    </div>
+
+    <div class="elemento">
+      <ion-label><b>Ubicación</b></ion-label>
+      <ion-item lines="none">
+        <ion-input type="text" name="ubicacion" placeholder="Escribe una dirección"></ion-input>
+      </ion-item>
+    </div>
+
+    <div class="elemento">
+        <ion-label><b>Etiquetas de búsqueda</b></ion-label>
+        <ion-item lines="none">
+          <ion-input type="text" name="nombre" placeholder="Escribe una etiqueta"></ion-input>
+        </ion-item>
+      </div>
+
+    <ion-button>Buscar</ion-button>
+
+  </div>
+
+</ion-content>

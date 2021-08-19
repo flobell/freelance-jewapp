@@ -1,0 +1,87 @@
+<ion-header class="cabecera-162h" style="background-color: var(--color-segundo);">
+  <img class="logo" src="assets/icon/logoBlancoInicio.png" alt="logoBlancoInicio.png">
+  <ion-toolbar class="cabecera-toolbar">
+    <ion-title class="cabecera-toolbar-titulo">
+      <b>Directorio</b>
+      <img src="assets/icon/iconNotification.png"  alt="iconNotification.png" style="width: 17.9pt; height: 21.02pt; float: right;" >
+    </ion-title>
+    <ion-searchbar class="cabecera-toolbar-searchbar" placeholder="Buscar"></ion-searchbar>
+    <ion-label class="cabecera-toolbar-avanzada" (click)="avanzado()"><u>Búsqueda avanzada</u></ion-label>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="intermedio">
+    <ion-button>Todos</ion-button>
+  </div>
+
+  <div class="flex-content">
+    <div class="flex-card" *ngFor="let categoria of ( categorias | async )" >
+      <ion-button class="flex-button" (click)="goToCategoria(categoria.id,categoria.name)"><img src="assets/icon/iconKosher.png"  alt="iconKosher.png" style="width: 42.42pt; height: 42.42pt;" ></ion-button>
+      <ion-label class="flex-label">{{categoria.name}}</ion-label>
+    </div>
+  </div> 
+<!--
+  <ion-grid class="cuadricula">
+
+    <ion-row class="fila">
+      <ion-col class="columna">
+        <ion-button><img src="assets/icon/iconRestaurante.png"  alt="iconRestaurante.png" style="width: 37.57pt; height: 37.57pt;" ></ion-button>
+        <br>
+        <ion-label>Restaurantes</ion-label>
+      </ion-col>
+      
+      <ion-col class="columna">
+        <ion-button><img src="assets/icon/iconSalud.png"  alt="iconSalud.png" style="width: 41.56pt; height: 36.96pt;" ></ion-button>
+        <br>
+        <ion-label>Salud y Bienestar</ion-label>
+      </ion-col>
+
+      <ion-col class="columna">
+        <ion-button><img src="assets/icon/iconBelleza.png"  alt="iconBelleza.png" style="width: 33.23pt; height: 37.28pt;" ></ion-button>
+        <br>
+        <ion-label>Belleza</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="fila" style="margin: 43pt 0pt;">
+      <ion-col class="columna">
+        <ion-button (click)="goToCategoria(1,'Tiendas Kosher')"><img src="assets/icon/iconKosher.png"  alt="iconKosher.png" style="width: 42.42pt; height: 42.42pt;" ></ion-button>
+        <br>
+        <ion-label>Tiendas Kosher</ion-label>
+      </ion-col>
+      
+      <ion-col class="columna">
+        <ion-button><img src="assets/icon/iconInstituciones.png"  alt="iconInstituciones.png" style="width: 37.51pt; height: 37.51pt;" ></ion-button>
+        <br>
+        <ion-label>Instituciones</ion-label>
+      </ion-col>
+
+      <ion-col class="columna">
+        <ion-button><img src="assets/icon/iconEscuelas.png"  alt="iconEscuelas.png" style="width: 44.92pt; height: 37.15pt;" ></ion-button>
+        <br>
+        <ion-label>Escuelas</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="fila">
+      <ion-col class="columna">
+        <ion-button><img src="assets/icon/iconTebila.png"  alt="iconTebila.png" style="width: 43.84pt; height: 35.6pt;" ></ion-button>
+        <br>
+        <ion-label>Tebilot</ion-label>
+      </ion-col>
+      
+      <ion-col class="columna">
+        <ion-button><img src="assets/icon/iconTemplos.png"  alt="iconTemplos.png" style="width: 35.59pt; height: 35.21pt;" ></ion-button>
+        <br>
+        <ion-label>Templos</ion-label>
+      </ion-col>
+
+      <ion-col class="columna">
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+-->
+</ion-content>

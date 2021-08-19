@@ -1,0 +1,23 @@
+<!--<ion-header>
+  <ion-toolbar>
+    <ion-title>registro2</ion-title>
+  </ion-toolbar>
+</ion-header>
+-->
+
+
+<ion-content>
+  <img class="logo-principal" src="assets/icon/logoAzul.png" alt="logoAzul.png">
+  
+  <form [formGroup]="preguntasForm">
+    <div *ngFor="let pregunta  of (preguntas | async); let i = index">
+      <p class="label" >{{pregunta.question}}</p>
+      <ion-item lines="none">
+        <ion-textarea formControlName="respuesta{{i}}"></ion-textarea>
+      </ion-item>
+    </div>
+  </form>
+
+  <ion-button class="continuar ion-float-end ion-float-right" strong="true" (click)="registrar()">Registrar</ion-button>
+
+</ion-content>

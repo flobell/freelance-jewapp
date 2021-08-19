@@ -1,0 +1,51 @@
+ion-list.campos{
+    margin: 30pt 0;
+    padding: auto 20pt;
+
+    ion-item{
+        ion-label{
+            color: #D1D1D1;
+        }
+        ion-input{
+            color: #D1D1D1;
+            font-size: 14pt;
+        }
+    }
+}
+
+ion-list.otro{
+    margin: 30pt 0;
+    padding: 0pt 0pt;
+    background: transparent;
+
+    ion-item{
+        height: 32pt;
+        --padding-bottom: 0pt;
+        --padding-end: 0pt;
+        --padding-start: 0pt;
+        --padding-top: 0pt;
+        --inner-padding-top: 0pt;
+        --inner-padding-bottom: 0pt;
+        --inner-padding-start: 20pt;
+        --inner-padding-end: 20pt;
+        
+        ion-label{
+            color: black;
+            font-size: 14pt;
+            margin: 0pt 0pt;
+        }
+    }
+}
+
+ion-list.cerrar{
+    margin: 30pt 0;
+    padding: auto 20pt;
+    color: red;
+    background: #F4F4F4;
+
+    p{
+        padding: 20pt 20pt;  
+        font-size: 14pt;
+    }
+
+}

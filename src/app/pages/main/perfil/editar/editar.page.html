@@ -1,0 +1,39 @@
+<ion-header class="cabecera-90h" style="background-color: var(--color-primero);">
+  <img class="logo" src="assets/icon/logoBlancoInicio.png" alt="logoBlancoInicio.png">
+  <ion-toolbar class="cabecera-toolbar">
+    <ion-title class="cabecera-toolbar-titulo">
+      <ion-label style="float: left; font-size: 16pt; color: white;" (click)="volver()">Cancelar</ion-label>
+      <b>Ajustes</b>
+      <ion-label style="float: right; font-size: 16pt; color: white;">OK</ion-label>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: #F4F4F4">
+
+  <ion-list class="campos">
+    <ion-item lines="none">
+      <ion-label position="stacked">Correo Electrónico</ion-label>
+      <ion-input type="email" name="correo" value="ejemplo@gmail.com"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="stacked">Nombre</ion-label>
+      <ion-input type="email" name="text" value="Jhon Doe"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="stacked">Telefono</ion-label>
+      <ion-input type="email" name="text" value=""></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-list class="otro">
+    <ion-item lines="none">
+      <ion-label >Cambiar Contraseña<ion-icon name="arrow-dropright" style="float: right;"></ion-icon></ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list class="cerrar">
+    <p (click)="logout()"><b>Cerrar Sesión</b></p>
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,48 @@
+div.cabecera{
+    width: 100%;
+    height: 90pt;
+    background: var(--color-cuarto);
+
+    img.logo{
+        position: relative;
+        display: block;
+        height: 48pt;
+        width: 48pt;
+        left: -6pt;
+        top: -11pt;
+        border-radius: 50%;
+    }
+
+    div.elementos{
+        margin-left: 20pt;
+        margin-right: 20pt;
+
+        p.header{
+            font-size: 18pt; 
+            color:white; 
+            text-align: center;
+            margin: 0%;
+        }
+    
+    }
+
+}
+
+div.cuerpo{
+    margin-block-start: 38pt;
+
+    ion-item{
+        height: 50pt;
+        --border-color: var(--color-cuarto);
+        
+        ion-label{
+            font-size: 20pt;
+            margin: 0pt 26pt;
+            
+            ion-icon{
+                color: var(--color-cuarto);
+                float: right;
+            }
+        }
+    }
+}

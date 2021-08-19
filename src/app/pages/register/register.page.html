@@ -1,0 +1,53 @@
+
+<ion-content>
+
+  <img class="logo-principal" src="assets/icon/logoAzul.png" alt="logoAzul.png">
+  
+  <form [formGroup]="registerForm">
+    <ion-item lines="none">
+      <ion-label position="floating">Nombre *</ion-label>
+      <ion-input formControlName="name" type="text"></ion-input>
+    </ion-item>
+    
+    <ion-item lines="none">
+      <ion-label position="floating">Apellido *</ion-label>
+      <ion-input formControlName="lastname" type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item lines="none">
+      <ion-label position="floating">Correo Electrónico *</ion-label>
+      <ion-input formControlName="email" type="email"></ion-input>
+    </ion-item>
+  
+    <ion-item lines="none">
+      <ion-label position="floating">Comunidad *</ion-label>
+      <ion-select formControlName="community" type="text">
+        <ion-select-option *ngFor="let comunidad  of (comunidades | async)" value="{{comunidad.id}}">{{comunidad.community}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item lines="none">
+      <ion-label position="floating">Contraseña *</ion-label>
+      <ion-input formControlName="password" type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item lines="none">
+      <ion-label position="floating">Confirmar Contraseña *</ion-label>
+      <ion-input formControlName="confirm" type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item lines="none" style="display: flex; align-items: center;" >
+      <!-- <ion-label position="stacked">Foto de perfil</ion-label>
+      <ion-input formControlName="imagenurl" type="file" accept=".jpg" multiple="false"  capture="user" (change)="changeListener($event)"></ion-input> -->
+      <ion-button style="width: 100%; height: 100%; display: flex; align-items: center;" type="button" (click)="cargarImagen()">
+        <ion-label color="white">Cargar imagen</ion-label>
+        &nbsp;
+        <ion-icon name="camera"></ion-icon>
+      </ion-button>
+      <!-- <img src="assets/icon/noun_Camera_2940866.png" alt="noun_Camera_2940866.png" slot="end" style="width: 20.36pt; height: 16.54pt; margin: 0; display: inline-block;"> -->
+    </ion-item>
+  
+    <ion-button class="continuar ion-float-end ion-float-right" strong="true" [disabled]="!registerForm.valid" (click)="continuar()">Continuar</ion-button>
+  </form>
+      
+</ion-content>

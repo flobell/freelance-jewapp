@@ -1,0 +1,26 @@
+<ion-content>
+
+  <img class="logo-principal" src="assets/icon/logoBlancoInicio.png" alt="logoBlancoInicio.png">
+
+
+  <form [formGroup]="loginForm" >
+    <ion-item class="campo" lines="none">
+      <ion-input formControlName="email" type="email" placeholder="USUARIO"></ion-input>
+    </ion-item>
+
+    <ion-item class="campo" lines="none">
+      <ion-input formControlName="password" type="password" placeholder="CONTRASEÑA"></ion-input>
+    </ion-item>
+    
+    <ion-button class="loginButton" expand="block" strong="true" [disabled]="!loginForm.valid" (click)="attemptLogin()">Iniciar Sesión</ion-button>
+  </form>
+
+  <p class="forgot"><b>¿Olvidaste tu contraseña?</b></p>
+
+  <div class="horizontal-line"></div>
+
+  <ion-button class="registerButton" expand="block" strong="true" (click)="registrar()">Registrarse</ion-button>
+
+  <p class="powered ion-float-end ion-float-right">Powered by <img src="assets/icon/logo789MX.png" alt="logo789MX.png" style="width: 38pt; height: 33pt;"></p>
+  
+</ion-content>

@@ -1,0 +1,89 @@
+<ion-header class="cabecera-90h" style="background-color: var(--color-quinto);">
+  <img class="logo" src="assets/icon/logoBlancoInicio.png" alt="logoBlancoInicio.png">
+  <ion-toolbar class="cabecera-toolbar">
+    <ion-title class="cabecera-toolbar-titulo" style="font-size: 18pt;">
+      <ion-icon name="arrow-dropleft" style="float: left;" (click)="volver()"></ion-icon>
+      <b>Mis Anuncios y Promociones</b>
+      <ion-label style="float: right; font-size: 16pt; color: white;" (click)="continuar()">Sig</ion-label>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div class="tipo-publicacion">
+    <ion-list class="list-radio">
+      <ion-list-header class="list-radio-header">
+        <ion-label class="list-radio-title">¿QUÉ DESEAS PUBLICAR?</ion-label>
+      </ion-list-header>
+      <ion-radio-group class="list-radio-group" [(ngModel)]="radio">
+          <ion-item class="list-radio-item" lines="none">
+            <ion-label>Anuncio</ion-label>
+            <ion-radio mode="md" slot="start" value="anuncio"></ion-radio>
+          </ion-item>
+          <ion-item class="list-radio-item" lines="none">
+            <ion-label>Promoción</ion-label>
+            <ion-radio mode="md" slot="start" value="promocion"></ion-radio>
+          </ion-item>
+      </ion-radio-group>
+    </ion-list>
+  </div>
+
+  <div class="formulario">
+  
+    <!--ANUNCIO-->
+    <div class="formulario-campo" *ngIf="radio === 'anuncio'">
+      <ion-label class="formulario-campo-titulo">TÍTULO DEL ANUNCIO *</ion-label>
+      <ion-input class="formulario-campo-input" placeholder="Escribe el título del anuncio" type="text" name="titulo-anuncio"></ion-input>
+    </div>
+
+    <div class="formulario-campo" *ngIf="radio === 'anuncio'">
+      <ion-label class="formulario-campo-titulo">DESCRIPCIÓN *</ion-label>
+      <ion-textarea class="formulario-campo-textarea" placeholder="Escribe la descripción del anuncio" type="text" name="descripcion-anuncio"></ion-textarea>
+    </div>
+
+    <div class="formulario-campo" *ngIf="radio === 'anuncio'">
+      <ion-label class="formulario-campo-titulo">FOTO DEL ANUNCIO</ion-label>
+      <ion-input class="formulario-campo-input" placeholder="Seleccionar foto" type="file" name="foto-anuncio" accept="image" style="margin-bottom: 8pt;"></ion-input>  
+    </div>
+
+    <div class="formulario-campo" *ngIf="radio === 'anuncio'">
+      <ion-label class="formulario-campo-titulo">ETIQUETAS DE BÚSQUEDA</ion-label>
+      <ion-select class="formulario-campo-select" placeholder="Elige las etiquetas que describen tu anuncio" name="etiquetas-anuncio" >
+      </ion-select>
+    </div>
+
+
+    <!--PROMOCION-->
+    <div class="formulario-campo" *ngIf="radio === 'promocion'">
+      <ion-label class="formulario-campo-titulo">TÍTULO DE LA PROMOCIÓN</ion-label>
+      <ion-input class="formulario-campo-input" placeholder="Escribe el título de la promoción" type="text" name="titulo-promocion"></ion-input>
+    </div>
+
+    <div class="formulario-campo" *ngIf="radio === 'promocion'">
+        <ion-label class="formulario-campo-titulo">NEGOCIO AFILIADO *</ion-label>
+        <ion-select class="formulario-campo-select" placeholder="Elige el negocio afiliado a la promoción" name="negocio-promocion" >
+        </ion-select>
+      </div>
+
+    <div class="formulario-campo" *ngIf="radio === 'promocion'">
+      <ion-label class="formulario-campo-titulo">DESCRIPCIÓN *</ion-label>
+      <ion-textarea class="formulario-campo-textarea" placeholder="Escribe la descripción de la promoción" type="text" name="descripcion-promocion"></ion-textarea>
+    </div>
+
+    <div class="formulario-campo" *ngIf="radio === 'promocion'">
+      <ion-label class="formulario-campo-titulo">FOTO DE LA PROMOCION</ion-label>
+      <ion-input class="formulario-campo-input" placeholder="Seleccionar foto" type="file" name="foto-promocion" accept="image" style="margin-bottom: 8pt;"></ion-input>  
+    </div>
+
+    <div class="formulario-campo" *ngIf="radio === 'promocion'">
+      <ion-label class="formulario-campo-titulo">ETIQUETAS DE BÚSQUEDA</ion-label>
+      <ion-select class="formulario-campo-select" placeholder="Elige las etiquetas que describen tu promoción" name="etiquetas-promocion" >
+      </ion-select>
+    </div>
+  
+    <ion-button class="formulario-boton-siguiente" type="button" (click)="continuar()">Siguiente</ion-button>
+
+  </div>
+</ion-content>

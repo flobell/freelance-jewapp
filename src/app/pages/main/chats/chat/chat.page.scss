@@ -1,0 +1,97 @@
+ion-list.informacion{
+    height: 88.53pt;
+
+    ion-item{
+        //border: 1px solid black;
+        display: inline-flex;
+        align-items: center;
+        vertical-align: auto;
+        height: 88.53pt;
+        width: 100%;
+
+        ion-avatar{
+            width: 50pt;
+            height: 50pt;
+            margin-right: 26pt;
+            background: grey;
+        }
+
+        ion-label{
+            p.title{
+                color: black;
+                font-size: 18pt;
+                text-align: left;
+            }
+            p.subtitle{
+                color: black;
+                font-size: 14pt;
+                text-align: left;
+            }
+
+        }
+
+    }
+}
+
+ion-list.chat{
+    height: auto;
+
+    ion-item.mensaje-recibido{
+        height: auto;
+        text-align: left;
+
+        ion-card.mensaje-globo{
+            width: auto;
+            max-width: 250pt;
+            color: black;
+            --border-radius: 10pt;
+            --background: #25BAF080;;
+
+            ion-card-content.mensaje-globo-texto{
+                font-size: 16pt;
+            }
+        }
+    }
+
+    ion-item.mensaje-enviado{
+        height: auto;
+        text-align: left;
+        direction: rtl;
+
+        ion-card.mensaje-globo{
+            direction: ltr;
+            width: auto;
+            max-width: 250pt;
+            color: black;
+            --border-radius: 10pt;
+            --background: #70707080;
+
+            ion-card-content.mensaje-globo-texto{
+                font-size: 16pt;
+            }
+        }
+    }
+
+}
+
+ion-footer{
+    ion-item{
+        --background: #F4F4F4;
+        ion-textarea{
+            margin: 0pt 5pt;
+            height: 100%;
+        }
+        ion-button.send {
+            float: right;
+            --border-radius: 50%;
+            --background: var(--color-primero);
+            --background-activated: var(--color-primero);
+            --background-focused : var(--color-primero);
+            --background-hover: var(--color-primero);
+        }
+    }
+}
+
+
+
+

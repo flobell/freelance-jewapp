@@ -1,0 +1,74 @@
+div.title-container{
+    width: 100%;
+    text-align: center;
+    margin: 17pt 0pt;
+
+    ion-label.title{
+        font-size: 16pt;
+        color: #707070;
+    }
+}
+
+
+ion-grid.estadisticas{
+    margin: 0pt 35pt;
+    //border: 1px solid black;
+    ion-row{
+        //border: 1px solid black;
+        ion-col{
+            //border: 1px solid black;
+            text-align: center;
+
+            ion-label.cantidad{
+                font-size: 20pt;
+                color: black;
+            }
+
+            ion-label.porcentaje{
+                font-size: 16pt;
+                color: #4AB346;
+            }
+
+            ion-label.descripcion{
+                font-size: 14pt;
+                color: #707070;
+            }
+        }
+    }
+}
+
+ion-list.opciones{
+    margin: 25pt 0pt;
+    ion-item{
+        height: 38pt;
+        ion-label{
+            margin-left: 13pt;
+            font-size: 16pt;
+        }
+        div.cantidad{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 17pt; 
+            height: 17pt; 
+            border-radius: 50%; 
+            background: #D1D1D1; 
+            float: right; 
+            text-align: center; 
+            color: white;
+            font-size: 10pt;
+        }
+    }
+}
+
+ion-list.otros{
+    margin: 25pt 0pt;
+    ion-item{
+        height: 38pt;
+        ion-label{
+            margin-left: 13pt;
+            font-size: 16pt;
+        }
+    }
+}
+

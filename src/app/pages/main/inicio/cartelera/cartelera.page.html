@@ -1,0 +1,76 @@
+<ion-header class="cabecera-162h" style="background-color: var(--color-tercero);">
+  <img class="logo" src="assets/icon/logoBlancoInicio.png" alt="logoBlancoInicio.png">
+  <ion-toolbar class="cabecera-toolbar">
+    <ion-title class="cabecera-toolbar-titulo">
+      <b>Cartelera</b>
+      <img src="assets/icon/iconNotification.png"  alt="iconNotification.png" style="width: 17.9pt; height: 21.02pt; float: right;" >
+    </ion-title>
+    <ion-searchbar class="cabecera-toolbar-searchbar" placeholder="Buscar"></ion-searchbar>
+    <ion-label class="cabecera-toolbar-avanzada" (click)="avanzado()"><u>Búsqueda avanzada</u></ion-label>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <div class="intermedio">
+    <ion-button>Todos</ion-button>
+  </div>
+
+  <ion-grid class="cuadricula">
+
+    <ion-row class="fila">
+      <ion-col class="columna">
+        <ion-button (click)="seleccion()"><img src="assets/icon/iconClases.png"  alt="iconClases.png" style="width: 38.78pt; height: 33.9pt;" ></ion-button>
+        <br>
+        <ion-label>Clases</ion-label>
+      </ion-col>
+      
+      <ion-col class="columna">
+        <ion-button><img src="assets/icon/iconConferencias.png"  alt="iconConferencias.png" style="width: 37.01pt; height: 37.01pt;" ></ion-button>
+        <br>
+        <ion-label>Conferencias</ion-label>
+      </ion-col>
+
+      <ion-col class="columna">
+        <ion-button><img src="assets/icon/iconRifas.png"  alt="iconRifas.png" style="width: 38.83pt; height: 38.83pt;" ></ion-button>
+        <br>
+        <ion-label>Seminarios</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="fila" style="margin: 43pt 0pt;">
+      <ion-col class="columna">
+        <ion-button><img src="assets/icon/iconViajes.png"  alt="iconViajes.png" style="width: 38.01pt; height: 36.84pt;" ></ion-button>
+        <br>
+        <ion-label>Viajes</ion-label>
+      </ion-col>
+      
+      <ion-col class="columna">
+        <ion-button><img src="assets/icon/iconTorneos.png"  alt="iconTorneos.png" style="width: 36.86pt; height: 35.74pt;" ></ion-button>
+        <br>
+        <ion-label>Torneos</ion-label>
+      </ion-col>
+
+      <ion-col class="columna">
+        <ion-button><img src="assets/icon/iconViajes.png"  alt="iconViajes.png" style="width: 36.65pt; height: 43.9pt;" ></ion-button>
+        <br>
+        <ion-label>Rifas</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="fila">
+      <ion-col class="columna">
+        <ion-button><img src="assets/icon/iconTalleres.png"  alt="iconTalleres.png" style="width: 43.96pt; height: 37.47pt;"></ion-button>
+        <br>
+        <ion-label>Talleres</ion-label>
+      </ion-col>
+      
+      <ion-col class="columna">
+      </ion-col>
+
+      <ion-col class="columna">
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+      
+</ion-content>

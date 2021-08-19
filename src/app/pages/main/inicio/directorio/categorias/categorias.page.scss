@@ -1,0 +1,18 @@
+div.cuerpo{
+    margin-block-start: 38pt;
+
+    ion-item{
+        height: 50pt;
+        --border-color: var(--color-segundo);
+        
+        ion-label{
+            font-size: 20pt;
+            margin: 0pt 26pt;
+            
+            ion-icon{
+                color: var(--color-segundo);
+                float: right;
+            }
+        }
+    }
+}

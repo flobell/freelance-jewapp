@@ -1,0 +1,55 @@
+<ion-header class="cabecera-90h" style="background-color: var(--color-segundo);">
+  <img class="logo" src="assets/icon/logoBlancoInicio.png" alt="logoBlancoInicio.png">
+  <ion-toolbar class="cabecera-toolbar">
+    <ion-title class="cabecera-toolbar-titulo" style="font-size: 18pt;">
+      <ion-icon name="arrow-dropleft" style="float: left;" (click)="volver()"></ion-icon>
+      <b>{{seleccionName}}</b>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<div class="filtro">
+  <ion-select placeholder="Filtrar Por" name="filtro">
+      <ion-select-option value="restaurantes">Restaurantes</ion-select-option>
+      <ion-select-option value="salud">Salud y bienestar</ion-select-option>
+      <ion-select-option value="belleza">Belleza</ion-select-option>
+      <ion-select-option value="kosher">Tiendas kosher</ion-select-option>
+      <ion-select-option value="instituciones">Instituciones</ion-select-option>
+      <ion-select-option value="escuelas">Escuelas</ion-select-option>
+      <ion-select-option value="tebilot">Tebilot</ion-select-option>
+      <ion-select-option value="templos">Templos</ion-select-option>
+  </ion-select>
+</div>
+
+
+<ion-content class="flexbox-cards">
+
+  <ion-card class="card-horizontal" (click)="local(negocio.id)" *ngFor="let negocio of (negocios | async)">
+    <img class="like" src="assets/icon/likeGrey.png">
+    <img class="miniatura" src="">
+    <ion-card-header>
+      <ion-card-title class="titulo"><b>{{negocio.name}}</b></ion-card-title>
+      <ion-card-title class="estado"><b>Abierto</b></ion-card-title>
+      <ion-card-title class="descripcion">{{negocio.description}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <img src="assets/icon/iconPhoneAzul.png" alt="iconPhone.png" style="width: 12.15pt; height: 12.15pt;">
+      <img src="assets/icon/iconLocationAzul.png" alt="iconLocationAzul.png" style="width: 8.99pt; height: 12.3pt;">
+    </ion-card-content>
+  </ion-card>
+ <!--
+  <ion-card class="card-horizontal" (click)="local(1)">
+    <img class="like" src="assets/icon/likeGrey.png">
+    <img class="miniatura" src="assets/icon/photo.png">
+    <ion-card-header>
+      <ion-card-title class="titulo"><b>Shuky Kosher</b></ion-card-title>
+      <ion-card-title class="estado"><b>Abierto</b></ion-card-title>
+      <ion-card-title class="descripcion">Shuky Kosher compañía 100% mexicana, líder indiscutible …</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <img src="assets/icon/iconPhoneAzul.png" alt="iconPhone.png" style="width: 12.15pt; height: 12.15pt;">
+      <img src="assets/icon/iconLocationAzul.png" alt="iconLocationAzul.png" style="width: 8.99pt; height: 12.3pt;">
+    </ion-card-content>
+  </ion-card>
+-->
+</ion-content>

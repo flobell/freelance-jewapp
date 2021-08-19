@@ -1,0 +1,30 @@
+<ion-header class="cabecera-140h" style="background-color: var(--color-primero);">
+  <img class="logo" src="assets/icon/logoBlancoInicio.png" alt="logoBlancoInicio.png">
+  <ion-toolbar class="cabecera-toolbar">
+    <ion-title class="cabecera-toolbar-titulo">
+      <b>Mensajes</b>
+      <img src="assets/icon/iconNotification.png"  alt="iconNotification.png" style="width: 17.9pt; height: 21.02pt; float: right;" >
+    </ion-title>
+    <ion-searchbar class="cabecera-toolbar-searchbar" placeholder="Buscar"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list class="chats" lines="full">
+    <ion-item class="chat">
+      <ion-avatar class="avatar" slot="start">
+        <img src="miniatura">
+      </ion-avatar>
+      <ion-label class="contenido">
+        <p class="tiempo">Ayer</p>
+        <p class="nombre" (click)="chat()"><b>Daniel Salame</b></p>
+        <p class="descripcion">TV en descuento</p>
+        <p class="contador">1</p>
+        <p class="avance">Lorem ipsum dolor sit abet…</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

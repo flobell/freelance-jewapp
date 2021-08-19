@@ -1,0 +1,53 @@
+div.formulario{
+    padding: 36pt 36pt;
+        
+    div.elemento{
+        margin-block-end: 24pt;
+
+        ion-label{
+            --color: black;
+            font-size: 16pt;
+            height: 23pt;
+        }
+
+        ion-item{
+            --border-radius: 5pt;
+            --background: #F4F4F4;
+            opacity: 100%;
+            width: 100%;
+            height: 45pt;
+            margin-top: 8pt;
+
+            ion-input{
+                width: 100%;
+                height: 45pt;
+            }
+
+            ion-label{
+                font-size: 14pt;
+                color: #707070;
+            }
+
+            ion-select{
+                width: 100%;
+                height: 45pt;
+            }
+        }
+    }
+    
+    ion-button{
+        --border-radius: 0pt;
+        --background: var(--color-tercero);
+        --background-activated: var(--color-tercero);
+        --background-focused : var(--color-tercero);
+        --background-hover: var(--color-tercero);
+        color: #FFFFFF;
+        width: 118pt;
+        height: 36pt; 
+        font-size: 16pt;
+        margin-block-start: 10pt;
+        display: block;
+        margin: 0 auto;
+    }
+}
+

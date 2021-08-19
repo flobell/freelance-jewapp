@@ -1,0 +1,32 @@
+<ion-header class="cabecera-162h" style="background-color: var(--color-cuarto);">
+  <img class="logo" src="assets/icon/logoBlancoInicio.png" alt="logoBlancoInicio.png">
+  <ion-toolbar class="cabecera-toolbar">
+    <ion-title class="cabecera-toolbar-titulo">
+      <b>Mercado</b>
+      <img src="assets/icon/iconNotification.png"  alt="iconNotification.png" style="width: 17.9pt; height: 21.02pt; float: right;" >
+    </ion-title>
+    <ion-searchbar class="cabecera-toolbar-searchbar" placeholder="Buscar"></ion-searchbar>
+    <ion-label class="cabecera-toolbar-avanzada" (click)="avanzado()"><u>Búsqueda avanzada</u></ion-label>
+  </ion-toolbar>
+</ion-header>
+
+
+<div class="filtro">
+  <ion-button (click)="categorias()">Filtrar por</ion-button>
+</div>
+
+
+<ion-content class="flexbox-cards">
+
+  <ion-card class="card-horizontal" (click)="seleccion()">
+    <img class="like" src="assets/icon/likeGrey.png">
+    <img class="miniatura" src="">
+    <ion-card-header>
+      <ion-card-title class="titulo"><b>2015 Land Rover…</b></ion-card-title>
+      <ion-card-title class="precio"><b>$ 445,000</b></ion-card-title>
+      <ion-card-title class="descripcion">Excelente camioneta marca: LAND ROVER … </ion-card-title>
+    </ion-card-header>
+    <ion-label class="tiempo">Hace 3 meses</ion-label>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,50 @@
+<ion-header class="cabecera-90h" style="background-color: var(--color-segundo);">
+  <img class="logo" src="assets/icon/logoBlancoInicio.png" alt="logoBlancoInicio.png">
+  <ion-toolbar class="cabecera-toolbar">
+    <ion-title class="cabecera-toolbar-titulo" style="font-size: 18pt;">
+      <ion-icon name="arrow-dropleft" style="float: left;" (click)="volver()"></ion-icon>
+      <b>{{nameCategory}}</b>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="cuerpo"> 
+
+    <ion-item lines="full">
+      <ion-label style="color: var(--azul-aquamarino);">Todas<ion-icon name="arrow-dropright" style="float: right;"></ion-icon></ion-label>
+    </ion-item>
+ 
+    <ion-item lines="full" (click)="seleccion(subcategoria.id, subcategoria.name)" *ngFor="let subcategoria of (subcategorias | async)">
+      <ion-label>{{subcategoria.name}}<ion-icon name="arrow-dropright" ></ion-icon></ion-label>
+    </ion-item>
+    
+<!--
+    <ion-item lines="full" (click)="seleccion(1,'Carnicerías')">
+      <ion-label>Carnicerías<ion-icon name="arrow-dropright" ></ion-icon></ion-label>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label>Lácteos y Pescados<ion-icon name="arrow-dropright" ></ion-icon></ion-label>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label>Panaderías<ion-icon name="arrow-dropright" ></ion-icon></ion-label>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label>Supermercado<ion-icon name="arrow-dropright" ></ion-icon></ion-label>
+    </ion-item>
+  
+    <ion-item lines="full">
+      <ion-label>Vino y Licores<ion-icon name="arrow-dropright" ></ion-icon></ion-label>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label>Otros<ion-icon name="arrow-dropright" ></ion-icon></ion-label>
+    </ion-item>
+  -->
+  </div>    
+
+</ion-content>

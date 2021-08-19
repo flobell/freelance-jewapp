@@ -1,0 +1,44 @@
+ion-content{
+    --background: linear-gradient(180deg, rgba(37,186,240,1) 0%, rgba(37,72,172,1) 90%);
+    --padding-start: 36.5pt;
+    --padding-end: 36.5pt;
+    --padding-top: 41pt;
+    --padding-bottom: 32.32pt;
+}
+
+img.logo-principal{
+    position: absolute;
+    display: block;
+    height: 109pt;
+    width: 109pt;
+    right: -18pt;
+    top: -12pt;
+    border-radius: 50%;
+}
+
+p.label{
+    color: #FFFFFF;
+    font-size: 16pt;
+    margin-block-start: 25pt;
+    margin-block-end: 11pt;
+}
+
+ion-item{
+    border-radius: 5pt;
+    background: #FFFFFF;
+    opacity: 90%;
+    height: 64pt; 
+}
+
+ion-button.continuar{
+    color: #FFFFFF;
+    --border-radius: 10pt;
+    --background: #FF7F00;
+    --background-activated: #FF7F00; 
+    --background-focused : #FF7F00;
+    --background-hover: #FF7F00;
+    width: 130.06;
+    height: 44.68pt; 
+    font-size: 18pt;
+    margin-block-start: 180pt;
+}

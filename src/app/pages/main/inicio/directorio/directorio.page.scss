@@ -1,0 +1,83 @@
+div.intermedio{
+    height: 74pt;
+    margin: 0pt 21pt;
+    padding-top: 21pt;
+    text-align: right;
+
+    ion-button{
+        color: var(--color-segundo);
+        --border-radius: 16pt;
+        --border-color: var(--color-segundo);
+        --border-width: 1px; 
+        --border-style: solid; 
+        --background: transparent;
+        --background-activated: transparent; 
+        --background-focused: transparent;
+        --background-hover: transparent;
+        --color-activated:  var(--color-segundo);
+        --color-focused:  var(--color-segundo);
+        --color-hover:  var(--color-segundo);
+    }
+}
+
+div.flex-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; //Eje X
+    align-items: flex-start; //Eje Y
+    --background: #F4F4F4;
+    --padding-top: 15pt;
+    --padding-bottom: 15pt;
+    --padding-end: 10pt;
+    --padding-start: 10pt;
+
+    div.flex-card{
+        display: inline-flex;
+        flex-direction: column;
+        margin: 25pt;
+
+        ion-button.flex-button{
+                width: 68pt;
+                height: 68pt;
+                margin: 12.5pt;
+                --border-radius: 50%;
+                --background: var(--color-segundo);
+                --background-activated: var(--color-segundo); 
+                --background-focused : var(--color-segundo);
+                --background-hover: var(--color-segundo);
+        }
+
+        ion-label.flex-label{
+            font-size: 14pt;
+            color: black;
+            text-align: center;
+        }
+    }
+}
+
+ion-grid.cuadricula{
+    //border: 1px solid black;
+    text-align: center;
+
+    ion-row.fila{
+        //border: 1px solid black;
+
+        ion-col.columna{
+            ion-button{
+                width: 68pt;
+                height: 68pt;
+                --border-radius: 50%;
+                --background: var(--color-segundo);
+                --background-activated: var(--color-segundo); 
+                --background-focused : var(--color-segundo);
+                --background-hover: var(--color-segundo);
+            }
+
+            ion-label{
+                font-size: 14pt;
+            }
+
+        }
+
+    }
+}

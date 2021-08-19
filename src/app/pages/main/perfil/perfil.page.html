@@ -1,0 +1,80 @@
+<ion-header class="cabecera-90h" style="background-color: var(--color-primero);">
+  <img class="logo" src="assets/icon/logoBlancoInicio.png" alt="logoBlancoInicio.png">
+  <ion-toolbar class="cabecera-toolbar">
+    <ion-title class="cabecera-toolbar-titulo">
+      <b>Mi Cuenta</b>
+      <ion-label style="float: right; font-size: 16pt; color: white;" (click)="editar()">Editar</ion-label>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content style="--background: #F4F4F4;">
+
+  <div class="title-container">
+    <ion-label class="title">En los últimos 7 dias:</ion-label>
+  </div>
+
+
+  <ion-grid class="estadisticas">
+    <ion-row>
+      <ion-col>
+        <ion-label class="cantidad"><b>0</b></ion-label><br><br>
+        <ion-label class="porcentaje"><ion-icon name="arrow-dropup" color="#4AB346; "></ion-icon>0%</ion-label><br><br>
+        <ion-label class="descripcion">vieron tus publicaciones</ion-label><br><br>
+      </ion-col>
+      <ion-col>
+        <ion-label class="cantidad"><b>0</b></ion-label><br><br>
+        <ion-label class="porcentaje"><ion-icon name="arrow-dropup" color="#4AB346;"></ion-icon>0%</ion-label><br><br>
+        <ion-label class="descripcion">vieron tu teléfono</ion-label><br><br>
+      </ion-col>
+      <ion-col>
+        <ion-label class="cantidad"><b>0</b></ion-label><br><br>
+        <ion-label class="porcentaje"><ion-icon name="arrow-dropup" color="#4AB346;"></ion-icon>0%</ion-label><br><br>
+        <ion-label class="descripcion">mandaron mensaje</ion-label><br><br>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list class="opciones">
+
+    <ion-item (click)="misNegocios()">
+      <img src="assets/icon/directorio-small.png" alt="directorio-small.png" style="width: 19.31pt; height: 20.84pt;">
+      <ion-label>Mis Negocios</ion-label>
+      <div class="cantidad">0</div>
+      <ion-icon name="arrow-dropright" color="#707070" style="float: right;"></ion-icon>
+    </ion-item>
+    <ion-item (click)="misEventos()">
+      <img src="assets/icon/cartelera-small.png" alt="cartelera-small.png" style="width: 20.91pt; height: 21pt;">
+      <ion-label>Mis Eventos</ion-label>
+      <div class="cantidad">0</div>
+      <ion-icon name="arrow-dropright" color="#707070" style="float: right;"></ion-icon>
+    </ion-item>
+    <ion-item (click)="misProductos()">
+      <img src="assets/icon/mercado-small.png" alt="mercado-small.png" style="width: 25.37pt; height: 20.74pt;">
+      <ion-label>Mis Productos</ion-label>
+      <div class="cantidad">0</div>
+      <ion-icon name="arrow-dropright" color="#707070" style="float: right;"></ion-icon>
+    </ion-item>
+    <ion-item (click)="misAnuncios()" lines="none">
+      <img src="assets/icon/anuncios-small.png" alt="anuncios-small.png" style="width: 21.25pt; height: 21.86pt;">
+      <ion-label>Mis anuncios y promociones</ion-label>
+      <div class="cantidad">0</div>
+      <ion-icon name="arrow-dropright" color="#707070" style="float: right;"></ion-icon>
+    </ion-item>
+  </ion-list>
+
+  <ion-list class="otros">
+    <ion-item>
+      <img src="assets/icon/noun_Info.png" alt="noun_Info.png" style="width: 19.54pt; height: 19.54pt;">
+      <ion-label>Información</ion-label>
+      <ion-icon name="arrow-dropright" color="#707070" style="float: right;"></ion-icon>
+    </ion-item>
+    <ion-item lines="none">
+      <img src="assets/icon/noun_help.png" alt="noun_help.png" style="width: 19.48pt; height: 19.48pt;">
+      <ion-label>Ayuda</ion-label>
+      <ion-icon name="arrow-dropright" color="#707070" style="float: right;"></ion-icon>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

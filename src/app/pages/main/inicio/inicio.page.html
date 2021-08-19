@@ -1,0 +1,58 @@
+<ion-header class="cabecera-140h" style="background-color: var(--color-primero);">
+  <img class="logo" src="assets/icon/logoBlancoInicio.png" alt="logoBlancoInicio.png">
+  <ion-toolbar class="cabecera-toolbar">
+    <ion-title class="cabecera-toolbar-titulo" style="text-align: left; font-size: 14pt;">
+      <img src="assets/icon/noun_Location_2351381.png"  alt="noun_Location_2351381.png" style="width: 16.55pt; height: 21.48pt; float: left; margin-right: 9pt;">
+      Estado de México
+      <img src="assets/icon/iconNotification.png"  alt="iconNotification.png" style="width: 17.9pt; height: 21.02pt; float: right;" >
+    </ion-title>
+    <ion-searchbar class="cabecera-toolbar-searchbar" placeholder="Buscar"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="anunciate">
+    <p style="color: red; text-align: center;">ANUNCIATE AQUI</p>
+  </div>
+
+  <ion-grid class="cuadricula" >
+
+    <ion-row class="fila">
+      <ion-col class="columna">
+        <ion-button (click)="directorio()" style="--background: var(--color-segundo); --background-activated: var(--color-segundo); --background-focused : var(--color-segundo); --background-hover: var(--color-segundo);">
+          <img src="assets/icon/directorio.png"  alt="directorio.png" style="width: 41.17pt; height: 44.45pt;" >
+        </ion-button>
+        <br>
+        <ion-label>Directorio</ion-label>
+      </ion-col>
+
+      <ion-col class="columna">
+        <ion-button (click)="cartelera()" style="--background: var(--color-tercero); --background-activated: var(--color-tercero); --background-focused : var(--color-tercero); --background-hover: var(--color-tercero);">
+          <img src="assets/icon/cartelera.png"  alt="cartelera.png" style="width: 52.51pt; height: 51.48pt;">
+        </ion-button>
+        <br>
+        <ion-label>Cartelera</ion-label>
+      </ion-col>
+    </ion-row>
+  
+    <ion-row class="fila">
+      <ion-col class="columna">
+        <ion-button (click)="mercado()" style="--background: var(--color-cuarto); --background-activated: var(--color-cuarto); --background-focused : var(--color-cuarto); --background-hover: var(--color-cuarto);">
+          <img src="assets/icon/mercado.png"  alt="mercado.png" style="width: 51.76pt; height: 42.32pt;">
+        </ion-button>
+        <br>
+        <ion-label>Mercado</ion-label>
+      </ion-col>
+
+      <ion-col class="columna">
+        <ion-button (click)="anuncios()" style="--background: var(--color-quinto); --background-activated: var(--color-quinto); --background-focused : var(--color-quinto); --background-hover: var(--color-quinto);">
+          <img src="assets/icon/anuncios.png"  alt="anuncios.png" style="width: 45.59pt; height: 46.9pt;">
+        </ion-button>
+        <br>
+        <ion-label>Anuncios</ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>

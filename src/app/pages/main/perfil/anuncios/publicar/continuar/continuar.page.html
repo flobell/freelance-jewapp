@@ -1,0 +1,46 @@
+<ion-header class="cabecera-90h" style="background-color: var(--color-quinto);">
+  <img class="logo" src="assets/icon/logoBlancoInicio.png" alt="logoBlancoInicio.png">
+  <ion-toolbar class="cabecera-toolbar">
+    <ion-title class="cabecera-toolbar-titulo" style="font-size: 18pt;">
+      <ion-icon name="arrow-dropleft" style="float: left;" (click)="volver()"></ion-icon>
+      <b>Mis Anuncios y Promociones</b>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="formulario">
+
+    <div class="formulario-campo" >
+      <ion-item class="formulario-campo-toggle">
+        <ion-label>Información Adicional</ion-label>
+        <ion-toggle [(ngModel)]="adicional"></ion-toggle>
+      </ion-item>
+    </div>
+  
+    <div class="formulario-campo" *ngIf="adicional === true">
+      <ion-label class="formulario-campo-titulo">TELÉFONO *<ion-icon name="add"></ion-icon></ion-label>
+      <ion-input class="formulario-campo-input" placeholder="5555-5555" type="text" name="telefono"></ion-input>
+    </div>
+  
+    <div class="formulario-campo" *ngIf="adicional === true">
+      <ion-label class="formulario-campo-titulo">WHATSAPP *<ion-icon name="add"></ion-icon></ion-label>
+      <ion-input class="formulario-campo-input" placeholder="55 5555-5555" type="text" name="whatsapp"></ion-input>
+    </div>
+  
+    <div class="formulario-campo" *ngIf="adicional === true">
+      <ion-label class="formulario-campo-titulo">EMAIL *<ion-icon name="add"></ion-icon></ion-label>
+      <ion-input class="formulario-campo-input" placeholder="ejemplo@negocio.com" type="email" name="email"></ion-input>
+    </div>
+  
+    <div class="formulario-campo" *ngIf="adicional === true">
+      <ion-label class="formulario-campo-titulo">SITIO WEB</ion-label>
+      <ion-input class="formulario-campo-input" placeholder="www.negocio.com" type="text" name="sitio"></ion-input>
+    </div>
+  
+  
+    <ion-button class="formulario-boton-submit" type="button" (click)="publicar()">Publicar</ion-button>
+
+  </div>
+</ion-content>

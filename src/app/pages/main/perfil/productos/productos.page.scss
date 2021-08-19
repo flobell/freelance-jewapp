@@ -1,0 +1,12 @@
+ion-segment.barra{
+    height: 38pt;
+    color: var(--color-cuarto);
+
+    ion-segment-button{
+        max-width: 100%;
+        --color: #707070;
+        --color-activated: var(--color-cuarto);
+        --color-checked: var(--color-cuarto);
+        --indicator-color-checked: var(--color-cuarto);
+    }
+}

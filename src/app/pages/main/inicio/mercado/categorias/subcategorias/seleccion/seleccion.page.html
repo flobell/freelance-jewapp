@@ -1,0 +1,32 @@
+<ion-header class="cabecera-90h" style="background-color: var(--color-cuarto);">
+  <img class="logo" src="assets/icon/logoBlancoInicio.png" alt="logoBlancoInicio.png">
+  <ion-toolbar class="cabecera-toolbar">
+    <ion-title class="cabecera-toolbar-titulo" style="font-size: 18pt;">
+      <ion-icon name="arrow-dropleft" style="float: left;" (click)="volver()"></ion-icon>
+      <b>Automoviles y Camionetas</b>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<div class="filtro">
+  <ion-select placeholder="Filtrar Por" name="filtro">
+      <ion-select-option value="Restaurantes">Restaurantes</ion-select-option>
+      <ion-select-option value="Suv">Suv, Jeep, Van</ion-select-option>
+      <ion-select-option value="Pickup">Pickup</ion-select-option>
+  </ion-select>
+</div>
+
+<ion-content class="flexbox-cards">
+
+  <ion-card class="card-horizontal" (click)="articulo()">
+    <img class="like" src="assets/icon/likeGrey.png">
+    <img class="miniatura" src="">
+    <ion-card-header>
+      <ion-card-title class="titulo"><b>2015 Land Rover…</b></ion-card-title>
+      <ion-card-title class="precio"><b>$ 445,000</b></ion-card-title>
+      <ion-card-title class="descripcion">Excelente camioneta marca: LAND ROVER … </ion-card-title>
+    </ion-card-header>
+    <ion-label class="tiempo">Hace 3 meses</ion-label>
+  </ion-card>
+
+</ion-content>

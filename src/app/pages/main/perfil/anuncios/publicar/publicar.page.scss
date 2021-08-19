@@ -1,0 +1,46 @@
+ion-content{
+    --background: #F4F4F4;
+    --padding-top: 26pt;
+}
+
+div.tipo-publicacion{
+    padding: 0pt 20pt;
+    margin-bottom: 20pt;
+
+
+
+    ion-list.list-radio{
+        background: transparent;
+
+        ion-list-header.list-radio-header{
+            ion-label.list-radio-title{
+                font-size: 14pt;
+                color: #707070;
+            }
+        }
+
+        ion-radio-group.list-radio-group{
+
+            ion-item.list-radio-item{
+                margin: 5pt 0pt;
+                display: flex;
+                align-items: center;
+                height: 17pt;
+                --background: transparent;
+                --inner-padding-bottom: 0pt;
+                --inner-padding-end: 0pt;
+                --inner-padding-start: 0pt;
+                --inner-padding-top: 0pt;
+                --padding-bottom: 0pt;
+                --padding-end: 0pt;
+                --padding-start: 0pt;
+                --padding-top: 0pt;
+                
+                ion-label{
+                    font-size: 12pt;
+                    color: #707070;
+                }
+            }
+        }
+    }
+}

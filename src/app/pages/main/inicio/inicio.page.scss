@@ -1,0 +1,32 @@
+div.anunciate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100pt;
+    border: solid 1px black;
+}
+
+ion-grid.cuadricula{
+    text-align: center;
+
+    ion-row.fila{
+        //border: 1px solid black;
+        margin: 40pt 0pt;
+
+        ion-col.columna{
+            ion-button{
+                height: 78pt;
+                width: 78pt;
+                --border-radius: 50%;
+            }
+
+            ion-label{
+                font-size: 16pt;
+            }
+
+        }
+
+    }
+
+}

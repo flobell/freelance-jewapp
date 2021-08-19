@@ -1,0 +1,53 @@
+ion-content{
+    --background: linear-gradient(180deg, rgba(37,186,240,1) 0%, rgba(37,72,172,1) 90%);
+    --padding-start: 42pt;
+    --padding-end: 42pt;
+    --padding-top: 68pt;
+    --padding-bottom: 31pt;
+}
+
+p.texto1{
+    color: #FFFFFF;
+    font-size: 16pt;
+    text-align: center;
+    margin-block-end: 15pt;
+}
+
+p.texto2{
+    color: #FFFFFF;
+    font-size: 30pt;
+    text-align: center;
+    margin-block-end: 15pt;
+}
+
+img.logo-principal{
+    display: block;
+    height: 109pt;
+    width: 109pt;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p.parrafo{
+    color: #FFFFFF;
+    font-size: 16pt;
+    text-align: center;
+    line-height: 25pt;
+    margin-block-start: 42pt;
+    margin-block-end: 44pt;
+}
+
+p.texto3{
+    color: #FFFFFF;
+    font-size: 16pt;
+    text-align: center;
+    margin-block-end: 19pt;
+}
+
+p.texto4{
+    color: #FFFFFF;
+    font-size: 14pt;
+    text-align: justify;
+    margin-block-end: 8pt;
+}

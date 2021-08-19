@@ -1,0 +1,12 @@
+ion-segment.segmentos{
+    height: 38pt;
+    color: var(--color-segundo);
+
+    ion-segment-button.boton-segmento{
+        max-width: 100%;
+        --color: #707070;
+        --color-activated: var(--color-segundo);
+        --color-checked: var(--color-segundo);
+        --indicator-color-checked: var(--color-segundo);
+    }
+}

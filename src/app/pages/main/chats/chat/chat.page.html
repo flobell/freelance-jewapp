@@ -1,0 +1,74 @@
+<ion-header class="cabecera-90h" style="background-color: var(--color-primero);">
+  <img class="logo" src="assets/icon/logoBlancoInicio.png" alt="logoBlancoInicio.png">
+  <ion-toolbar class="cabecera-toolbar">
+    <ion-title class="cabecera-toolbar-titulo" style="font-size: 18pt;">
+      <ion-icon name="arrow-dropleft" style="float: left;" (click)="volver()"></ion-icon>
+      <b>Daniel Salame</b>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-list class="informacion" lines="full">
+  <ion-item>
+      <ion-avatar slot="start">
+        <img class="thumbnail" src="">
+      </ion-avatar>
+      <ion-label>
+        <p class="title" ><b>TV en descuento</b></p><br>
+        <p class="subtitle">$750,000</p><br>
+      </ion-label>
+  </ion-item>
+</ion-list>
+
+<ion-content>
+
+  <ion-list class="chat" lines="none">
+    
+    <ion-item class="mensaje-recibido">
+      <ion-card class="mensaje-globo">
+        <ion-card-content class="mensaje-globo-texto">
+          Esta disponible?
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+
+    <ion-item class="mensaje-enviado">
+      <ion-card class="mensaje-globo">
+        <ion-card-content class="mensaje-globo-texto">
+          Sí
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+
+    <ion-item class="mensaje-recibido">
+      <ion-card class="mensaje-globo">
+        <ion-card-content class="mensaje-globo-texto">
+          Cuanto cuesta?
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+
+    <ion-item class="mensaje-enviado">
+      <ion-card class="mensaje-globo">
+        <ion-card-content class="mensaje-globo-texto">
+          750,000
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+    
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <ion-item>
+    <img src="assets/icon/noun_Camera.png" alt="noun_camera.png" style="width: 20.36pt; height: 16.54pt; margin: 0pt 5pt;">
+    <img src="assets/icon/iconAttachment.png" alt="iconAttachment.png" style="width: 17.29pt; height: 15.77pt; margin: 0pt 5pt;">
+    <ion-textarea placeholder="Escribe tu mensaje.."></ion-textarea>
+    <ion-button class="send">
+      <ion-icon name="send"></ion-icon>
+    </ion-button>
+  </ion-item>
+</ion-footer>
+
+

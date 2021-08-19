@@ -1,0 +1,538 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+:root {
+    --color-primero: #25BAF0;
+    --color-segundo: #00CDC8;
+    --color-tercero: #FFB100;
+    --color-cuarto: #FF2460;
+    --color-quinto: #008CBF;
+}
+
+//Logo pequeño esquinado de la aplicacion
+img.logo{
+    position: absolute;
+    display: block;
+    height: 48pt;
+    width: 48pt;
+    left: -6pt;
+    top: -11pt;
+    border-radius: 50%;
+}
+
+//--------------------------------------------HEADER
+ion-header.cabecera-140h{
+    width: 100%;
+    height: 140pt;
+}
+
+ion-header.cabecera-162h{
+    width: 100%;
+    height: 162pt;
+}
+
+ion-header.cabecera-90h{
+    width: 100%;
+    height: 90pt;
+}
+
+ion-toolbar.cabecera-toolbar{
+    padding-top: 20pt;
+    padding-left: 20pt;
+    padding-right: 20pt;
+    --background: none;
+
+    ion-title.cabecera-toolbar-titulo{
+        margin-top: 25pt;
+        font-size: 20pt;
+        color: white;
+        text-align: center;
+        padding: 0pt 0pt;
+    }
+    
+    ion-searchbar.cabecera-toolbar-searchbar{
+        width: 100%;
+        height: 40pt;
+        margin-top: 14pt;
+        margin-bottom: 6pt;
+        padding: 0pt 0pt;
+        --icon-color: #707070;
+        --placeholder-color: #707070;
+    }
+
+    ion-label.cabecera-toolbar-avanzada{
+        font-size: 12pt;
+        color: white;
+        text-align: right;
+        float: right;
+    }
+}
+
+//--------------------------------------------CARDS
+ion-content.flexbox-cards{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; //Eje X
+    align-items: center; //Eje Y
+    --background: #F4F4F4;
+    --padding-top: 15pt;
+    --padding-bottom: 15pt;
+    --padding-end: 10pt;
+    --padding-start: 10pt;
+}
+
+ion-card.card-horizontal{
+    text-align: left;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start; //Eje X
+    align-items: flex-start; //Eje Y
+    width: 322pt;
+    max-width: 322pt;
+    height: 77pt;
+    background-color: white;
+    border-radius: 5pt;
+    margin: 12pt 12pt;
+
+    img.like{
+        position: absolute;
+        top: 7pt;
+        left: 7pt;
+        width: 19.98pt;
+        height: 17.76pt;
+    }
+
+    ion-label.tiempo{
+        position: absolute;
+        bottom: 7pt;
+        right: 7pt;
+        font-size: 8pt;
+        color: #D1D1D1;
+
+    }
+
+    img.miniatura{
+        width: 103pt;
+        height: 100%;
+        background-color: grey;
+    }
+
+    ion-card-header{
+        width: 194pt;
+        padding: 5pt 6pt;
+        
+        ion-card-title.titulo{
+            color: black;
+            font-size: 14pt;
+        }
+
+        ion-card-title.estado{
+            color: var(--color-segundo);
+            font-size: 10pt;
+        }
+
+        ion-card-title.horario{
+            color: var(--color-tercero);
+            font-size: 10pt;
+
+        }
+
+        ion-card-title.precio{
+            color: var(--color-cuarto);
+            font-size: 10pt;
+        }
+
+        ion-card-title.descripcion{
+            color: black;
+            font-size: 10pt;
+            max-height: 29pt;
+        }
+    }
+
+    ion-card-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5pt 6pt;
+        
+        img{
+            margin: 4.5pt 0pt;
+        }
+    }
+ 
+}
+
+ion-card.card-vertical{
+    display: inline-flex;
+    flex-direction: column;
+    width: 162pt;
+    max-width: 162pt;
+    height: 228pt;
+    background-color: white;
+    border-radius: 5pt;
+    margin: 5pt 5pt;
+
+    img.like{
+        position: absolute;
+        top: 9pt;
+        right: 9pt;
+        width: 19.98pt;
+        height: 17.76pt;
+    }
+
+    ion-label.tiempo{
+        position: absolute;
+        bottom: 9pt;
+        left: 9pt;
+        font-size: 12pt;
+        color: #D1D1D1;
+    }
+
+    img.miniatura{
+        width: 100%;
+        height: 99pt;
+        background-color: grey;
+    }
+
+    ion-card-header{
+        width: 100%pt;
+        padding: 11pt 9pt;
+        
+        ion-card-title.titulo{
+            color: black;
+            font-size: 14pt;
+        }
+
+        ion-card-title.tipo{
+            color: black;
+            font-size: 8pt;
+        }
+
+        ion-card-title.estado{
+            color: var(--color-segundo);
+            font-size: 12pt;
+        }
+
+        ion-card-title.horario{
+            color: var(--color-tercero);
+            font-size: 12pt;
+
+        }
+        ion-card-title.horario-evento{
+            color: var(--color-tercero);
+            font-size: 10pt;
+
+        }
+
+        ion-card-title.precio{
+            color: var(--color-cuarto);
+            font-size: 12pt;
+        }
+
+        ion-card-title.precio-producto{
+            color: var(--color-cuarto);
+            font-size: 12pt;
+        }
+
+        ion-card-title.costo{
+            color: var(--color-quinto);
+            font-size: 12pt;
+        }
+
+        ion-card-title.descripcion{
+            color: black;
+            font-size: 12pt;
+            max-height: 29pt;
+        }
+
+        ion-card-title.descripcion-evento{
+            color: black;
+            font-size: 10pt;
+            max-height: 29pt;
+        }
+    }
+
+    ion-card-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5pt 6pt;
+        
+        img{
+            margin: 4.5pt 0pt;
+        }
+    }
+ 
+}
+
+
+ion-card.card-info-horizontal{
+    display: inline-flex;
+    flex-direction: column;
+    width: 334pt;
+    max-width: 334pt;
+    height: 119pt;
+    background-color: white;
+    border-radius: 0;
+    padding: 12pt 13pt;
+    margin: 5pt 5pt;
+
+    img.miniatura{
+        position: absolute;
+        top: 12pt;
+        right: 13pt;
+        width: 81pt;
+        height: 53pt;
+        background-color: grey;
+    }
+
+    ion-card-header.card-info-horizontal-header{
+        text-align: left;
+        //border: 1px solid black;
+        display: inline-block;
+        padding: 0 0;
+        margin-bottom: 10pt;
+
+        ion-card-title.card-info-horizontal-header-title{
+            //border: 1px solid black;
+            font-size: 12pt;
+            color: black;
+        }
+
+        ion-card-title.card-info-horizontal-header-precio{
+            font-size: 10pt;
+            color: var(--color-cuarto);
+            margin: 0pt 0pt;
+        }
+
+        ion-card-subtitle.card-info-horizontal-header-subtitle{
+            //border: 1px solid black;
+            font-size: 10pt;
+            color: #707070;
+            margin-top: 12pt;
+        }
+    }
+
+    ion-card-content.card-info-horizontal-content{
+        text-align: left;
+        height: auto;
+        border-bottom: 1px solid #F4F4F4;
+        padding: 0pt 0pt;
+        margin-top: 7pt;
+        margin-bottom: 3pt;
+
+        ion-label.estadistica{
+            display: inline-block;
+            color: black;
+            margin-right: 17pt;
+
+            img{
+                display: inline-block;
+                margin-right: 2pt;
+            }
+        }
+
+        ion-label.tiempo{
+            float: right;
+            font-size: 8pt;
+            color: #707070;
+        }
+    }
+
+    div.opciones{
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+
+        div.iconos{
+            img{
+                display: inline-block;
+                margin-right: 10pt;
+            }
+        }
+
+        ion-button.compartir{
+            font-size: 6.5pt;
+            width: 108pt;
+            height: 20pt; 
+            color: #FFFFFF;
+            --border-radius: 0pt;
+            --background: #FF7F00;
+            --background-activated: #FF7F00; 
+            --background-focused : #FF7F00;
+            --background-hover: #FF7F00;
+        }
+    }
+
+}
+//--------------------------------------------SECCION DE PERFIL
+div.contenedor-vacio{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    ion-label{
+        color: #707070;
+        font-size: 16pt;
+        margin-bottom: 45pt;
+    }
+
+    ion-button{
+        width: 216pt;
+        height: 36pt;
+        font-size: 12pt;
+        color: #FFFFFF;
+        --border-radius: 0pt;
+        --background: #FF7F00;
+        --background-activated: #FF7F00; 
+        --background-focused : #FF7F00;
+        --background-hover: #FF7F00;
+    }
+}
+
+//--------------------------------------------FORMULARIO
+div.formulario{
+    //border: 1px solid black;
+    padding: 0pt 0pt;
+    background: transparent;
+
+    div.formulario-campo{
+        margin-bottom: 20pt;
+        //border: 1px solid black;
+
+        ion-label.formulario-campo-titulo{
+            //border: 1px solid black;
+            width: 100%;
+            font-size: 14pt;
+            color: #707070;
+            background-color: transparent;
+            padding: 0pt 20pt;
+    
+            ion-icon{
+                float: right;
+                padding: 0pt 20pt;
+            }
+        }
+
+        ion-input.formulario-campo-input{
+            //border: 1px solid black;
+            height: 49pt;
+            width: 100%;
+            margin-top: 8pt;
+            --placeholder-color: #D1D1D1;
+            --placeholder-font-weight: 14pt;
+            --padding-start: 20pt;
+            --padding-end: 20pt;
+            --background: white;
+        }
+
+        ion-textarea.formulario-campo-textarea{
+            width: 100%;
+            height: 107pt;
+            margin-top: 8pt;
+            --placeholder-color: #D1D1D1;
+            --placeholder-font-weight: 14pt;
+            --padding-top: 15pt;
+            --padding-bottom: 15pt;
+            --padding-start: 20pt;
+            --padding-end: 20pt;
+            --background: white;
+    
+        }
+
+        ion-select.formulario-campo-select{
+            display: flex;
+            align-items: center;
+            height: 49pt;
+            width: 100%;
+            margin-top: 8pt;
+            background: white;
+            --placeholder-color: #D1D1D1;
+            --placeholder-font-weight: 14pt;
+            --padding-start: 20pt;
+            --padding-end: 20pt;
+            
+        }
+
+        ion-label.formulario-campo-descripcion{
+            font-size: 12pt;
+            color: #707070;
+            background-color: transparent;
+            padding: 0pt 20pt;
+        }
+  
+        ion-item.form-toggle{
+            color: #707070;
+            font-size: 14pt;
+            --inner-padding-top: 0pt;
+            --inner-padding-bottom: 0pt;
+            --inner-padding-start: 20pt;
+            --inner-padding-end: 20pt;
+
+            ion-toggle{
+                --background-checked: var(--color-primero);
+                --handle-background-checked: var(--color-primero);
+            }
+        }
+            
+    }
+
+    ion-button.formulario-boton-siguiente{
+        text-align: center;
+        width: 100%;
+        height: 49pt;
+        margin-bottom: 24pt;
+        font-size: 12pt;
+        --background: var(--color-primero);
+        --background-activated: var(--color-primero);
+        --background-focused: var(--color-primero);
+        --background-hover: var(--color-primero);
+        --border-radius: 0;
+    }
+
+    ion-button.formulario-boton-submit{
+        text-align: center;
+        width: 100%;
+        height: 49pt;
+        margin-bottom: 24pt;
+        font-size: 14pt;
+        --background: #FF7F00;
+        --background-activated: #FF7F00;
+        --background-focused: #FF7F00;
+        --background-hover: #FF7F00;
+        --border-radius: 0;
+    }
+
+}

@@ -1,0 +1,146 @@
+<ion-header class="cabecera-90h" style="background-color: var(--color-segundo);">
+  <img class="logo" src="assets/icon/logoBlancoInicio.png" alt="logoBlancoInicio.png">
+  <ion-toolbar class="cabecera-toolbar">
+    <ion-title class="cabecera-toolbar-titulo" style="font-size: 18pt;">
+      <ion-icon name="arrow-dropleft" style="float: left;" (click)="volver()"></ion-icon>
+      <b>Registrar Negocio</b>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="formulario">
+
+    <div class="formulario-campo" >
+      <ion-item class="formulario-campo-toggle">
+        <ion-label>¿Cuenta con establecimiento?</ion-label>
+        <ion-toggle [(ngModel)]="establecimiento"></ion-toggle>
+      </ion-item>
+    </div>
+  
+    <ng-container *ngIf="establecimiento === true">
+      <form [formGroup]="establecimientoForm">
+
+        <div class="formulario-campo">
+          <ion-label class="formulario-campo-titulo">HORARIOS</ion-label>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-segment scrollable="true" [(ngModel)]="horario" (ionChange)="segmentChanged($event)" [ngModelOptions]="{standalone: true}">
+                  <ion-segment-button value="0"><ion-label>Lun</ion-label></ion-segment-button>
+                  <ion-segment-button value="1"><ion-label>Mar</ion-label></ion-segment-button>
+                  <ion-segment-button value="2"><ion-label>Mie</ion-label></ion-segment-button>
+                  <ion-segment-button value="3"><ion-label>Jue</ion-label></ion-segment-button>
+                  <ion-segment-button value="4"><ion-label>Vie</ion-label></ion-segment-button>
+                  <ion-segment-button value="5"><ion-label>Sab</ion-label></ion-segment-button>
+                  <ion-segment-button value="6"><ion-label>Dom</ion-label></ion-segment-button>
+                </ion-segment>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ng-container *ngIf="horario">
+                <ion-col width-50>
+                  <ion-item>
+                    <ion-label>Abre: <b>{{abre[horario]}}</b></ion-label>
+                    <ion-datetime display-format="HH:mm" picker-format="HH:mm" placeholder="HH:mm" cancelText="Cancelar" doneText="Aceptar" (ionChange)="setAbierto($event)"  [(ngModel)]="timepickerAbierto" [ngModelOptions]="{standalone: true}"></ion-datetime>
+                  </ion-item>
+                </ion-col>
+    
+                <ion-col width-50>
+                  <ion-item>
+                    <ion-label>Cierra: <b>{{cierra[horario]}}</b></ion-label>
+                    <ion-datetime display-format="HH:mm" picker-format="HH:mm" placeholder="HH:mm" cancelText="Cancelar" doneText="Aceptar" (ionChange)="setCerrado($event)" [(ngModel)]="timepickerCerrado" [ngModelOptions]="{standalone: true}"></ion-datetime>
+                  </ion-item>
+                </ion-col>
+              </ng-container>
+            </ion-row>
+          </ion-grid>
+        </div>
+
+        <div class="formulario-campo">
+          <ion-label class="formulario-campo-titulo">CALLE</ion-label>
+          <ion-input class="formulario-campo-input" formControlName="calle" placeholder="8 norte" type="text" name="calle"></ion-input>
+        </div>
+        
+        <div class="formulario-campo">
+          <ion-label class="formulario-campo-titulo">NO. EXTERIOR</ion-label>
+          <ion-input class="formulario-campo-input" formControlName="exterior" placeholder="1904" type="number" name="exterior"></ion-input>
+        </div>
+      
+        <div class="formulario-campo">
+          <ion-label class="formulario-campo-titulo">NO. INTERIOR<ion-icon name="add"></ion-icon></ion-label>
+          <ion-input class="formulario-campo-input" formControlName="interior" placeholder="1904" type="number" name="interior"></ion-input>
+        </div>
+      
+        <div class="formulario-campo">
+          <ion-label class="formulario-campo-titulo">COLONIA<ion-icon name="add"></ion-icon></ion-label>
+          <ion-input class="formulario-campo-input" formControlName="colonia" placeholder="centro" type="text" name="colonia"></ion-input>
+        </div>
+      
+        <div class="formulario-campo">
+          <ion-label class="formulario-campo-titulo">C.P.<ion-icon name="add"></ion-icon></ion-label>
+          <ion-input class="formulario-campo-input" formControlName="cp" placeholder="00000" type="text" name="cp"></ion-input>
+        </div>
+      
+        <div class="formulario-campo">
+          <ion-label class="formulario-campo-titulo">MUNICIPIO</ion-label>
+          <ion-input class="formulario-campo-input" formControlName="municipio" placeholder="Cuajimalpa" type="text" name="municipio"></ion-input>
+        </div>
+      
+        <div class="formulario-campo">
+          <ion-label class="formulario-campo-titulo">CERTIFICACION</ion-label>
+          <ion-input class="formulario-campo-input" formControlName="certificacion" placeholder="KMD" type="text" name="certificacion"></ion-input>
+        </div>
+      
+        <div class="formulario-campo">
+          <ion-label class="formulario-campo-titulo">MENÚ O CATÁLOGO</ion-label>
+          <ion-input class="formulario-campo-input" placeholder="Subir PDF o JPG" type="file" name="menu"></ion-input>
+        </div>
+      </form>
+    </ng-container>
+    
+  
+    <div class="formulario-campo" >
+      <ion-item class="formulario-campo-toggle">
+        <ion-label>¿Tiene sitio web o redes sociales?</ion-label>
+        <ion-toggle [(ngModel)]="sociales"></ion-toggle>
+      </ion-item>
+    </div>
+
+    <ng-container *ngIf="sociales === true">
+      <form [formGroup]="redesForm"> 
+        <div class="formulario-campo">
+          <ion-label class="formulario-campo-titulo">SITIO WEB</ion-label>
+          <ion-input class="formulario-campo-input" formControlName="web" placeholder="www.negocio.com" type="url" name="web"></ion-input>
+        </div>
+      
+        <div class="formulario-campo">
+          <ion-label class="formulario-campo-titulo">FACEBOOK</ion-label>
+          <ion-input class="formulario-campo-input" formControlName="facebook" placeholder="Usuario Facebook" type="text" name="facebook"></ion-input>
+        </div>
+      
+        <div class="formulario-campo">
+          <ion-label class="formulario-campo-titulo">INSTAGRAM</ion-label>
+          <ion-input class="formulario-campo-input" formControlName="instagram" placeholder="@usuario" type="text" name="instagram"></ion-input>
+        </div>
+      </form>
+    </ng-container>
+
+<!--     <div class="formulario-campo">
+      <ion-label class="formulario-campo-titulo">Etiquetas*</ion-label>
+      <ion-tags-input [(ngModel)]="tags" (onChange)="onChange($event)" [verifyMethod]="verifyTag" (keyup)="updateList($event)"></ion-tags-input>
+    </div>
+ -->
+
+    <div class="formulario-campo">
+      <ion-label class="formulario-campo-titulo">Etiquetas*</ion-label>
+      <tag-input [(ngModel)]='tags'></tag-input>
+    </div>
+
+
+
+    <ion-button class="formulario-boton-submit" type="button" (click)="publicar()">Publicar</ion-button>
+
+  </div>
+</ion-content>

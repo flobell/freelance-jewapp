@@ -1,0 +1,85 @@
+<ion-header class="cabecera-90h" style="background-color: var(--color-segundo);">
+  <img class="logo" src="assets/icon/logoBlancoInicio.png" alt="logoBlancoInicio.png">
+  <ion-toolbar class="cabecera-toolbar">
+    <ion-title class="cabecera-toolbar-titulo" style="font-size: 18pt;">
+      <ion-icon name="arrow-dropleft" style="float: left;" (click)="volver()"></ion-icon>
+      <b>Registrar Negocio</b>
+      <ion-label style="float: right; font-size: 16pt; color: white;" (click)="continuar()">Sig</ion-label>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="formulario">
+    <form [formGroup]="formulario">
+      
+      <div class="formulario-campo">
+        <ion-label class="formulario-campo-titulo">NOMBRE *</ion-label>
+        <ion-input class="formulario-campo-input" formControlName="nombre" placeholder="Nombre del negocio" type="text"></ion-input>
+      </div>
+      
+      <div class="formulario-campo">
+        <ion-label class="formulario-campo-titulo">CATEGORÍA *</ion-label>
+        <ion-select class="formulario-campo-select" formControlName="categoria"  placeholder="Elige una categoría" (ionChange)="setSubcategorias($event)">
+          <ion-select-option value="{{categoria.id}}" *ngFor="let categoria of (categorias | async)">{{categoria.name}}</ion-select-option>
+          <!-- <ion-select-option value="salud">Salud y bienestar</ion-select-option>
+          <ion-select-option value="tienda">Tienda</ion-select-option>
+          <ion-select-option value="kosher">Kosher</ion-select-option>
+          <ion-select-option value="institucion">Institución</ion-select-option>
+          <ion-select-option value="escuela">Escuela</ion-select-option>
+          <ion-select-option value="tebila">Tebila</ion-select-option>
+          <ion-select-option value="templo">Templo</ion-select-option> -->
+        </ion-select>
+      </div>
+    
+      <div class="formulario-campo">
+        <ion-label class="formulario-campo-titulo">SUB-CATEGORÍA *</ion-label>
+        <ion-select multiple={true} class="formulario-campo-select" formControlName="subcategoria" placeholder="Elige una sub-categoría" [(ngModel)]="subcategoriasNgModel">
+          <ion-select-option value="{{subcategoria.id}}" *ngFor="let subcategoria of (subcategorias | async)">{{subcategoria.name}}</ion-select-option>
+        </ion-select>
+      </div>
+      
+      <div class="formulario-campo">
+        <ion-label class="formulario-campo-titulo">DESCRIPCIÓN *</ion-label>
+        <ion-textarea class="formulario-campo-textarea" formControlName="descripcion"  placeholder="Descripción del negocio" type="text"></ion-textarea>
+      </div>
+    
+      <div class="formulario-campo">
+        <ion-label class="formulario-campo-titulo">ETIQUETAS DE BÚSQUEDA *</ion-label>
+      </div>
+    
+      <div class="formulario-campo">
+        <ion-label class="formulario-campo-titulo">TELÉFONO *<ion-icon name="add"></ion-icon></ion-label>
+        <ion-input class="formulario-campo-input" formControlName="telefono"  placeholder="5555-5555" type="text"></ion-input>
+      </div>
+    
+      <div class="formulario-campo">
+        <ion-label class="formulario-campo-titulo">WHATSAPP<ion-icon name="add"></ion-icon></ion-label>
+        <ion-input class="formulario-campo-input" formControlName="whatsapp"  placeholder="55 5555-5555" type="text"></ion-input>
+      </div>
+    
+      <div class="formulario-campo">
+        <ion-label class="formulario-campo-titulo">EMAIL *<ion-icon name="add"></ion-icon></ion-label>
+        <ion-input class="formulario-campo-input" formControlName="email" placeholder="ejemplo@negocio.com" type="email"></ion-input>
+      </div>
+
+        
+      <div class="formulario-campo">
+        <ion-label class="formulario-campo-titulo">GALERIA *</ion-label>
+        <ion-button class="formulario-imagepicker" style="width: 100%; height: 100%; display: flex; align-items: center;" type="button" (click)="seleccionarImagenes()">
+          <ion-label color="white">Cargar imagen</ion-label>
+        </ion-button>
+        <ion-label class="formulario-campo-descripcion">La primera imagen se utilizará como portada de tu negocio</ion-label>
+      </div>
+
+      <div class="formulario-campo">
+        <ion-label class="formulario-campo-titulo">VIDEO</ion-label>
+        <ion-input class="formulario-campo-input" formControlName="youtube" placeholder="Link a video de youtube" type="url" name="video"></ion-input>
+      </div>
+
+    </form>
+
+    <ion-button class="formulario-boton-siguiente" type="button" (click)="continuar()">Siguiente</ion-button>
+
+  </div>
+</ion-content>

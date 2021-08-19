@@ -1,0 +1,70 @@
+<ion-header class="cabecera-90h" style="background-color: var(--color-quinto);">
+  <img class="logo" src="assets/icon/logoBlancoInicio.png" alt="logoBlancoInicio.png">
+  <ion-toolbar class="cabecera-toolbar">
+    <ion-title class="cabecera-toolbar-titulo" style="font-size: 18pt;">
+      <ion-icon name="arrow-dropleft" style="float: left;" (click)="volver()"></ion-icon>
+      <b>Mis Anuncios</b>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-segment class="barra" [(ngModel)]="segment" (ionChange)="segmentChanged($event)">
+  <ion-segment-button value="1"><ion-label>Publicados</ion-label></ion-segment-button>
+  <ion-segment-button value="2"><ion-label>En Revisión</ion-label></ion-segment-button>
+</ion-segment>
+
+
+<ion-content class="flexbox-cards">
+
+  <!--REGISTRADOS-->
+  <ng-container *ngIf="segment === '1'">
+
+    <ng-container *ngIf="listaPublicados.length > 0">
+      <ion-card class="card-info-horizontal" *ngFor="let item of listaPublicados">
+        <img class="miniatura" src="">
+        <ion-card-header class="card-info-horizontal-header">
+          <ion-card-title class="card-info-horizontal-header-title">Descuento televisiones</ion-card-title>
+          <ion-card-subtitle class="card-info-horizontal-header-subtitle">25 noviembre 11:30</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content class="card-info-horizontal-content">
+          <ion-label class="estadistica"><img src="assets/icon/eye_Grey.png" style="width: 12pt; height: 8.42pt;">0</ion-label>
+          <ion-label class="estadistica"><img src="assets/icon/cursor_Grey.png" style="width: 10.97pt; height: 11.01pt;">0</ion-label>
+          <ion-label class="tiempo">Vence en 30 días</ion-label>
+        </ion-card-content>
+        <div class="opciones">
+          <div class="iconos">
+            <img src="assets/icon/graph_Blue.png" style="width: 15.35pt; height: 11.48pt;">
+            <img src="assets/icon/trash_Blue.png" style="width: 9.28pt; height: 11.6pt;">
+            <img src="assets/icon/edit_Blue.png" style="width: 11.15pt; height: 11.15pt;">
+          </div>
+          <ion-button class="compartir" size="small">Comparte tu Anuncio</ion-button>
+        </div>
+      </ion-card>
+    </ng-container>
+
+    <ng-container *ngIf="listaPublicados.length < 1">
+      <div class="contenedor-vacio">
+        <ion-label><b>No tienes anuncios publicados</b></ion-label>
+        <ion-button (click)="publicar()">Publica un Anuncio</ion-button>
+      </div>
+    </ng-container> 
+
+  </ng-container>
+
+  <!--EN REVISION-->
+  <ng-container *ngIf="segment === '2'">
+
+    <ng-container *ngIf="listaRevision.length > 0;">
+    </ng-container>
+
+    <ng-container *ngIf="listaRevision.length < 1;" >
+      <div class="contenedor-vacio">
+        <ion-label><b>No hay anuncios en revisión</b></ion-label>
+      </div>
+    </ng-container>  
+
+  </ng-container>
+
+</ion-content>
+
+
